@@ -1,0 +1,252 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5abfoqlblak2"]
+
+[ext_resource type="Script" path="res://Scenes/world.gd" id="1_46gk8"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_46gk8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PowerPlants" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PowerPlants"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.05
+
+[node name="CityButton" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.5
+offset_right = 78.5
+offset_bottom = 44.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "City"
+
+[node name="Label" type="Label" parent="CanvasLayer/PowerPlants/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Power Plants:
+
+Your energy: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.05
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Toggle on"
+flat = true
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Toggle on"
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.05
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Toggle on"
+flat = true
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/PowerPlants/VBoxContainer/HBoxContainer2/Panel3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Toggle on"
+flat = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/PowerPlants/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.05
+
+[node name="City" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/City"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/City"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PowerPlantsButton" type="Button" parent="CanvasLayer/City/Panel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.5
+offset_top = -44.0
+offset_right = 78.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Power Plants"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/City"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 71.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CanvasLayer/City/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[connection signal="button_down" from="CanvasLayer/PowerPlants/VBoxContainer/Panel/CityButton" to="." method="_on_city_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/City/Panel2/PowerPlantsButton" to="." method="_on_power_plants_button_button_down"]

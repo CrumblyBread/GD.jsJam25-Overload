@@ -1,0 +1,198 @@
+[gd_scene load_steps=4 format=3 uid="uid://e0vi16t7yb3l"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_kbkhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_387e8"]
+font_size = 50
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dv746"]
+bg_color = Color(0.201527, 0.201527, 0.201527, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_kbkhf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -231.0
+offset_right = 133.0
+offset_bottom = -162.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OverLoad"
+label_settings = SubResource("LabelSettings_387e8")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="OptionsMenu" type="VBoxContainer" parent="CanvasLayer/Panel"]
+visible = false
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -40.0
+offset_right = 287.5
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/OptionsMenu"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/OptionsMenu"]
+layout_mode = 2
+alignment = 1
+
+[node name="OptionsBack" type="Button" parent="CanvasLayer/Panel/OptionsMenu/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Back"
+
+[node name="CreditsMenu" type="VBoxContainer" parent="CanvasLayer/Panel"]
+visible = false
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -67.0
+offset_right = 200.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel/CreditsMenu"]
+layout_mode = 2
+text = "This game was made for the GameDev.js 2025 Game Jam by CrumblyBread"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/CreditsMenu"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/CreditsMenu"]
+layout_mode = 2
+alignment = 1
+
+[node name="CreditsBack" type="Button" parent="CanvasLayer/Panel/CreditsMenu/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Back"
+
+[node name="MainMenu" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -31.0
+offset_right = 96.0
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/Panel/MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Play"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/MainMenu"]
+custom_minimum_size = Vector2(50, 15)
+layout_mode = 2
+
+[node name="Options" type="Button" parent="CanvasLayer/Panel/MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Option"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Panel/MainMenu"]
+custom_minimum_size = Vector2(50, 15)
+layout_mode = 2
+
+[node name="Credits" type="Button" parent="CanvasLayer/Panel/MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Credits
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/Panel/MainMenu"]
+custom_minimum_size = Vector2(50, 15)
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="CanvasLayer/Panel/MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 1.25
+text = "Quit"
+
+[node name="AskBox" type="Panel" parent="CanvasLayer/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 386.0
+offset_top = 284.0
+offset_right = 764.0
+offset_bottom = 444.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dv746")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/AskBox"]
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 92.0
+text = "Are you sure you want to Quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/AskBox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_top = 100.0
+offset_right = 378.0
+offset_bottom = 153.0
+alignment = 1
+
+[node name="NoButton" type="Button" parent="CanvasLayer/Panel/AskBox/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "No"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/AskBox/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="YesButton" type="Button" parent="CanvasLayer/Panel/AskBox/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Yes"
+
+[connection signal="button_down" from="CanvasLayer/Panel/OptionsMenu/HBoxContainer/OptionsBack" to="." method="_on_options_back_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/CreditsMenu/HBoxContainer/CreditsBack" to="." method="_on_credits_back_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/MainMenu/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/MainMenu/Options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/MainMenu/Credits" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/MainMenu/Quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/AskBox/HBoxContainer/NoButton" to="." method="_on_no_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/Panel/AskBox/HBoxContainer/YesButton" to="." method="_on_yes_button_button_down"]
